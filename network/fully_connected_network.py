@@ -76,16 +76,16 @@ class FullyConnectedNetwork(object):
                 self.calc_loss()
 
 if __name__ == '__main__':
-    fully_connected_network = FullyConnectedNetwork(3, 0.01)
+    fully_connected_network = FullyConnectedNetwork(3, 0.1)
     input_layer = define.Layer(2)
     for i in range(0, input_layer.neuron_num):
         input_layer.add_neuron(define.Neuron(2))
-    hide_layer = define.Layer(3)
+    hide_layer = define.Layer(4)
     for i in range(0, hide_layer.neuron_num):
         hide_layer.add_neuron(define.Neuron(2))
     output_layer = define.Layer(1)
     for i in range(0, output_layer.neuron_num):
-        output_layer.add_neuron(define.Neuron(3))
+        output_layer.add_neuron(define.Neuron(4))
     fully_connected_network.add_layer(input_layer)
     fully_connected_network.add_layer(hide_layer)
     fully_connected_network.add_layer(output_layer)
